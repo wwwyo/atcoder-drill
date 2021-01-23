@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_025422) do
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "url", null: false
+    t.boolean "is_checked", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
