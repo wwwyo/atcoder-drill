@@ -18,7 +18,7 @@ class Cron
     res = Net::HTTP.post_form(
       URI.parse('https://slack.com/api/chat.postMessage'),
       {
-        'token': 'xoxb-1554787893026-1680565550705-TJEjG7AntlIIcQsTAp0jNNsR',
+        'token': ENV['DRILL_APP'],
         'channel': '#毎日１問',
         'text': "<!channel> おはようございます！今日も頑張りましょう！！ \n
                 [難易度: abc]#{question.name} \n
