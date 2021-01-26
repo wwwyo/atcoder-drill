@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + "/environment")
 set :output, "#{Rails.root}/log/cron.log"
 env :PATH, ENV['PATH']
+env :DRILL_APP_SLACK, ENV['DRILL_APP_SLACK']
 
 rails_env = ENV['RAILS_ENV'] || :development
 # cronを実行する環境変数をセット
